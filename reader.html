@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Comic Reader</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comic Seite</h1>
+
+  <img id="page-img" src="locked.jpg">
+  <br>
+  <button id="buy-btn">Seite für 5 Cent freischalten</button>
+
+  <script>
+    let purchased = false;
+
+    document.getElementById("buy-btn").onclick = () => {
+      // später: echtes Payment
+      purchased = true;
+      document.getElementById("page-img").src = "page1.jpg";
+      document.getElementById("buy-btn").style.display = "none";
+    };
+  </script>
+
+</body>
+</html>
